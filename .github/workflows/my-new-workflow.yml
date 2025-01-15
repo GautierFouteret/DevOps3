@@ -1,7 +1,7 @@
-name:  Test Manual Workflow
+name: Test Manual Workflow
 
 on:
-  workflow_dispatch: #Allow you ...
+  workflow_dispatch:
     inputs:
       Environment:
         description: "The environment I need to deploy on"
@@ -23,3 +23,5 @@ jobs:
         run: echo '${{ toJSON(runner) }}'
       - name: Secrets Variable
         run: echo "Secrets are not displayed for security reasons"
+      - name: Env Variable
+        run: echo '${{ secrets.MY_API_URL }}'
