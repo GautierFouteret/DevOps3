@@ -19,3 +19,7 @@ jobs:
           echo "Env Name: ${{ github.event.inputs.Environment }}"
       - name: Github Variable
         run: echo '${{ toJSON(github) }}'
+      - name: Runner Variable
+        run: echo '${{ toJSON(runner) }}'
+      - name: Secrets Variable
+        run: echo "Secrets are not displayed for security reasons"
