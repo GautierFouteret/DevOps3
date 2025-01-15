@@ -1,7 +1,7 @@
 name:  Test Manual Workflow
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: #Allow you ...
     inputs:
       Environment:
         description: "The environment I need to deploy on"
